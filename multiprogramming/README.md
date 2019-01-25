@@ -9,3 +9,10 @@ Mach initially explored this dual and showed similar performance through complem
 
 ## User threads vs kernel threads
 [StackOverflow post](https://stackoverflow.com/questions/15983872/difference-between-user-level-and-kernel-supported-threads)
+Summary is that user level threads are cheaper but make sub-optimial scheduling decisions and also have issues with blocking user calls. Kernel threads provide that functionality. Green-threading systems make this work by convering blocking calls to asynchronous calls. Scheduler Activations has a hybrid approach where resources are provided and revoked with explicit communication.
+
+## Fine-grained vs coarse-grained processing
+Fine-grained parallelism has less implementation cost but a large scheduling overhead which makes it less efficient. Coarse-grained is more efficient but is more complex overall. One guiding principle is to aggregate composed fine-grained paralleism into coarse blocks that are efficiently scheduled (see Kubernetes pods, Lithe threading library, GPU architecture, etc.)
+
+## Local vs global scheduling
+Global scheduling has better overall performance since scheduler can make inter-system decisions. But it has issues like starvation or convoying. Local systems may have worse overall performance but achieve better optimizations at the local level. But local scheduling does not lead to overprosioning.
