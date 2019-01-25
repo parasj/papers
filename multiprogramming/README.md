@@ -16,3 +16,6 @@ Fine-grained parallelism has less implementation cost but a large scheduling ove
 
 ## Local vs global scheduling
 Global scheduling has better overall performance since scheduler can make inter-system decisions. But it has issues like starvation or convoying. Local systems may have worse overall performance but achieve better optimizations at the local level. But local scheduling does not lead to overprosioning.
+
+### Economic scarcity as a way to avoid overcomitting resources
+This relates closely with scheduling. But Lithe and Scheduler Activations treat resources as scarce objects that are granted and revoked from processes. Visible recovation is a useful technique to ensure that local optimizers perform collaboratively. Similarly, the VAX virtual memory system performs page replacement per-process which avoids issues with processes allocating and deallocating pages to quickly.
