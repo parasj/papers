@@ -19,3 +19,6 @@ Global scheduling has better overall performance since scheduler can make inter-
 
 ### Economic scarcity as a way to avoid overcomitting resources
 This relates closely with scheduling. But Lithe and Scheduler Activations treat resources as scarce objects that are granted and revoked from processes. Visible recovation is a useful technique to ensure that local optimizers perform collaboratively. Similarly, the VAX virtual memory system performs page replacement per-process which avoids issues with processes allocating and deallocating pages to quickly.
+
+## Read heavy? or write heavy?
+Read-copy update demonstrates that workload asymmetry can influence system design. They reduced locking overhead to zero for reads with limited cost on writing.
