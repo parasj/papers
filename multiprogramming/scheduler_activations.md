@@ -5,9 +5,9 @@ Kernel-level threads have about 10x faster context switching than processes. Thi
 
 User-level threads are more efficient (10x) than kernel-level threads but they can make suboptimal scheduling decisions in some situations. When the user thread scheduled on a kernel thread blocks, it will idle the CPU that it was running on. This leads to wastage and poor performance. _Go avoids these issues by replacing system calls and IO with custom shims that avoid the issue of blocking in a green thread._
 
-Scheduler Activations proposes a hybrid approach where the kernel thread 
+Scheduler Activations proposes a hybrid approach where the kernel thread exposes a "virtual multiprocessor". Kernel can preempt tasks but not resume tasks. It instead notifies the user-threading library to schedule a new process. Threading libraries make downcalls to the system for more resources.
 
 ## Key takeaways:
 * *User-level management of parallelism is more efficient than system-wide*
 * Coarse-grained parallelism is more efficient than fine-grained parallelism. It's hard to schedule fine-grained parallelism directly.
-* Local vs global? Pluggable global seems to be more efficient but industry has adopted more of a local approach.
+* Local vs global? Pluggable global seems to be more efficient but industry has adopted more of a local approach (Go).
