@@ -24,3 +24,6 @@ This relates closely with scheduling. But Lithe and Scheduler Activations treat 
 
 ## Read heavy? or write heavy?
 Read-copy update demonstrates that workload asymmetry can influence system design. They reduced locking overhead to zero for reads with limited cost on writing.
+
+## Consistency: Snoopy cache vs invalidation
+Snoopy protocol is better for SMP with single memory bus and thus write-heavvy workloads. Cache line simpler to implement. In practice, cache line invalidation is more common.
