@@ -1,4 +1,5 @@
 # Virtual memory
+Overview: http://pages.cs.wisc.edu/~sschang/OS-Qual/memory/Memory.htm
 
 ## Segmentation vs Paging
 Segmentation = variable user defined sizes for regions of memory. A segment is some linear portion of address space. Segment table contains the base and length of the segment as well as permissions. Address translation is very simple. Segments are convenient as they can be separately protected and can grow independently. Also, they can easily be shared between processes without significant issues.
