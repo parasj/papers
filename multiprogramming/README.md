@@ -1,5 +1,7 @@
 # Multiprogramming
 
+Summary: http://pages.cs.wisc.edu/~sschang/OS-Qual/process/process_and_synchronization.htm
+
 Overview: running processes on multicore systems requires coordination, conflict resolution, etc. How to design systems for these multicore systems? How should OS manage memory and schedule tasks?
 
 ## Message passing vs shared memory
