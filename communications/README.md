@@ -5,3 +5,6 @@ Stubs enable consistency of semantics. Calls look just like local calls for both
 
 ## Latency vs bandwidth for RPC; RPC needs low latency
 Low latency is critical for good RPC performance. Projects like Active Messages and Cedar (PARC) demonstrate attention paid to optimizing latency for small messages. These needs sometimes bypass conventional networking stack.
+
+## Interleaved execution with communication is critical for good performance
+Active Messages strived to interleave execution with communication. This disguises the latency of the network. In order to enable the processor to remain utilized, interleaving is important.
