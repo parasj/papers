@@ -1,0 +1,5 @@
+## HP AutoRAID
+
+This paper outlines a system that automatically migrates data between multiple levels of storage to automatically balance performance with storage cost. The motiviation for this paper was that RAID is hard to configure, and that it was difficult to add disks to an array. They key solution in the paper is that hot pages are copied between a mirrored set and a RAID 5 set. It's implemented behind the SCSI interface so that it is transparent to the user.
+
+I am not sure how hard it is to maintain a RAID array these days. I've worked with large disk arrays and the choice of RAID configuration is usually relatively simple. So I question the premise of this paper. Also, I don't think it's a good assumption to make that the "hot" data remains constant. If this is to be a truly automatic storage system, it should work for a wide range of business use cases. One common use case would be a database for a bank where the "hot" data are typically the newest transactions, which would invalidate this assumption.
