@@ -1,3 +1,5 @@
+Old questions: https://www2.eecs.berkeley.edu/Grads/CS/Prelims/osqu.html
+
 Q1
 Describe paging and segmentation.  What are their disadvantages and advantages.  List a way to overcome the disadvantage.
 What's E2E argument?  Give two examples.
