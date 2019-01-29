@@ -8,3 +8,6 @@ A key design point for file-systems is if they are mainly optimized for large nu
 
 ## Read-only, write-only, immutable, mutable, append-only
 Some systems improve performance by restricting the model for modifying data. GFS is optimized for append-only data. DynamoDB optimizes mutable data. Haystack optimizes photo storage using large log index structures.
+
+## Erasure coding vs replication
+Erasure coding increases storage overhead moderately but increases overall write throughput and read throughput. However, replication is simpler and requires less CPU overhead. E.g. OceanStore uses parity while Chord uses replication
