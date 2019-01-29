@@ -1,5 +1,15 @@
 # File systems
 
+|Local FS|Distributed FS|
+|---|---|
+|[Basics](https://github.com/parasj/papers/blob/master/file_systems/basics.md)||
+|[Unix Fast File System](https://github.com/parasj/papers/blob/master/file_systems/fast_file_system.md)||
+|[Log structured FS](https://github.com/parasj/papers/blob/master/file_systems/log_structured_file_system.md)||
+|[Comparision of journaling approaches](https://github.com/parasj/papers/blob/master/file_systems/journaling_file_systems.md)||
+|[Case for RAID](https://github.com/parasj/papers/blob/master/file_systems/case_for_raid.md)||
+|[HP AutoRAID](https://github.com/parasj/papers/blob/master/file_systems/hp_autoraid.md)||
+
+
 ## Performance vs persistence tradeoff
 In many file systems, there is a trade off between durability and performance. High performance can be achieved by batching/buffering writes but that decreases durability. This leads to the fault-tolerance vs latency vs throughput tradeoff in some ways.
 
