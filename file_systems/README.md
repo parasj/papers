@@ -21,3 +21,6 @@ Some systems improve performance by restricting the model for modifying data. GF
 
 ## Erasure coding vs replication
 Erasure coding increases storage overhead moderately but increases overall write throughput and read throughput. However, replication is simpler and requires less CPU overhead. E.g. OceanStore uses parity while Chord uses replication
+
+## Storing state on clients or servers?
+Storing state on clients makes fault-tolerance easier (NFS) and reduces server load (Sprite, AFS). Most distributed FS cache state on clients as well to improve performance. However, Coda demonstrates that storing state on clients can also increase availability.
