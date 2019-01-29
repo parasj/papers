@@ -2,7 +2,7 @@
 
 |Local FS|Distributed FS|
 |---|---|
-|[Basics](https://github.com/parasj/papers/blob/master/file_systems/basics.md)||
+|[Basics](https://github.com/parasj/papers/blob/master/file_systems/basics.md)|[NFS](https://github.com/parasj/papers/blob/master/file_systems/sun_nfs.md)|
 |[Unix Fast File System](https://github.com/parasj/papers/blob/master/file_systems/fast_file_system.md)||
 |[Log structured FS](https://github.com/parasj/papers/blob/master/file_systems/log_structured_file_system.md)||
 |[Comparision of journaling approaches](https://github.com/parasj/papers/blob/master/file_systems/journaling_file_systems.md)||
