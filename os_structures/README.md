@@ -6,7 +6,7 @@
   * SPIN
   * Hydra
 * [Multikernel](https://github.com/parasj/papers/blob/master/os_structures/multikernel.md)
-* Unikernel
+* [Unikernel](https://github.com/parasj/papers/blob/master/os_structures/unikernel.md)
 * Microkernels
  * Overview of microkernels
  * seL4
