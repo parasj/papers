@@ -24,3 +24,6 @@ Erasure coding increases storage overhead moderately but increases overall write
 
 ## Storing state on clients or servers?
 Storing state on clients makes fault-tolerance easier (NFS) and reduces server load (Sprite, AFS). Most distributed FS cache state on clients as well to improve performance. However, Coda demonstrates that storing state on clients can also increase availability.
+
+## Optimistic vs pessimistic concurrency
+Optimistic concurrency is generally higher throughput and has better availability, but can lead to conflicts. DynamoDB demonstrates that this conflict resolution protocol can be complex. Pessimistic concurrency is slower but avoids all conflicts.
