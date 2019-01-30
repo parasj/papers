@@ -10,12 +10,18 @@ As an example, virtual memory is handled by having a pool of pages that applicat
 
 The exokernel approach is interesting. Library OS's have become more popular recently with the rise of containers. My main criticism is that the system would seem to have poor optimization of tasks like scheduling and networking as it is sacrificing global control.
 
+## Exokernel principles:
+1) Separate protection from management (policy)
+2) Expose names (access hardware directly)
+3) Expose allocation
+4) Expose revocation (politely ask for resources back, then forcibly)
+5) Expose information
+
+## Exokernel responsiblity
+* IPC
+* VM
+* Scheduling
+* Networking
+
 ## Exokernel vs microkernel
 Exokernel's focus is similar to microkernel in many ways but takes a different stance as microkernels value primarily minimalism.
-
-Exokernel principles:
-1) Separate protection from management (policy)
-2) Expose names
-3) Expose allocation
-4) Expose revocation
-5) Expose information
