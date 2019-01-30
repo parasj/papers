@@ -5,3 +5,8 @@
   * [Exokernel](https://github.com/parasj/papers/blob/master/os_structures/exokernel.md)
   * SPIN
   * Hydra
+* Multikernel
+* Unikernel
+* Microkernels
+ * Overview of microkernels
+ * seL4
