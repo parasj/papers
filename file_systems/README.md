@@ -4,7 +4,7 @@
 |---|---|
 |[Basics](https://github.com/parasj/papers/blob/master/file_systems/basics.md)|[NFS](https://github.com/parasj/papers/blob/master/file_systems/sun_nfs.md)|
 |[Unix Fast File System](https://github.com/parasj/papers/blob/master/file_systems/fast_file_system.md)|[Andrew FS](https://github.com/parasj/papers/blob/master/file_systems/andrew_fs.md)|
-|[Log structured FS](https://github.com/parasj/papers/blob/master/file_systems/log_structured_file_system.md)|Coda|
+|[Log structured FS](https://github.com/parasj/papers/blob/master/file_systems/log_structured_file_system.md)|[Coda](https://github.com/parasj/papers/blob/master/file_systems/coda.md)|
 |[Comparision of journaling approaches](https://github.com/parasj/papers/blob/master/file_systems/journaling_file_systems.md)|[Sprite](https://github.com/parasj/papers/blob/master/file_systems/sprite_network_fs.md)|
 |[Case for RAID](https://github.com/parasj/papers/blob/master/file_systems/case_for_raid.md)||
 |[HP AutoRAID](https://github.com/parasj/papers/blob/master/file_systems/hp_autoraid.md)||
