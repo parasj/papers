@@ -8,7 +8,7 @@
 * [Multikernel](https://github.com/parasj/papers/blob/master/os_structures/multikernel.md)
 * [Unikernel](https://github.com/parasj/papers/blob/master/os_structures/unikernel.md)
 * Microkernels
- * [Mach (ext)]((http://www.cs.cornell.edu/courses/cs6410/2018fa/slides/07-microkernels.pdf))
+ * [Mach (ext)](http://www.cs.cornell.edu/courses/cs6410/2018fa/slides/07-microkernels.pdf)
  * [seL4](https://github.com/parasj/papers/blob/master/os_structures/seL4.md)
 
 ## Key design tradeoffs
