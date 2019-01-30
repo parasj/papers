@@ -24,8 +24,9 @@ ecure
 * Get correctness first and then optimize later
 
 ## Systems tradeoffs
-* Functionality vs performance vs `x`
+* Functionality vs performance vs `x` 
   * `x` can be usability, consistency, safety, security
+* Performance vs portability
 * Latency vs bandwidth vs fault-tolerance requirements [Clark 95]
 * Fine-grained vs coarse-grained
   * coarse-grained provides performance but is more complex and less s
