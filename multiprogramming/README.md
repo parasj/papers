@@ -17,7 +17,7 @@ Summary is that user level threads are cheaper but make sub-optimial scheduling 
 Fine-grained parallelism has less implementation cost but a large scheduling overhead which makes it less efficient. Coarse-grained is more efficient but is more complex overall. One guiding principle is to aggregate composed fine-grained paralleism into coarse blocks that are efficiently scheduled (see Kubernetes pods, Lithe threading library, GPU architecture, etc.)
 
 ## Local vs global scheduling
-Global scheduling has better overall performance since scheduler can make inter-system decisions. But it has issues like starvation or convoying. Local systems may have worse overall performance but achieve better optimizations at the local level. But local scheduling does not lead to overprosioning.
+Global scheduling has better overall performance since scheduler can make inter-system decisions. But it has issues like starvation or convoying. Local systems may have worse overall performance but achieve better optimizations at the local level. But local scheduling can lead to overprovisioning.
 
 ### Economic scarcity as a way to avoid overcomitting resources
 This relates closely with scheduling. But Lithe and Scheduler Activations treat resources as scarce objects that are granted and revoked from processes. Visible recovation is a useful technique to ensure that local optimizers perform collaboratively. Similarly, the VAX virtual memory system performs page replacement per-process which avoids issues with processes allocating and deallocating pages to quickly.
