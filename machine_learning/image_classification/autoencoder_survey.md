@@ -1,4 +1,4 @@
-# Variational Auto Encoders
+# A practical tutorial on autoencoders for nonlinear feature fusion: Taxonomy, models, software and guidelines
 
 ## What is the problem that is being solved?
  Autoencoders effectively learn dimensionality reduction. The hope is that they learn semantically meaningful embeddings of inputs into some lower dimensional space and filter the noise in the input.
