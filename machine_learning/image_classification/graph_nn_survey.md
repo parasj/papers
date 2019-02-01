@@ -7,8 +7,8 @@
  Reconstruction error, application specific metrics?
 
 ## What are the key innovations over prior work?
- Pre-deep learning: Spectral methods
-Recent work: Graph attention networks, GGNN, GLSTM
+ * Pre-deep learning: Spectral methods
+ * Recent work: Graph attention networks, GGNN, GLSTM
 
 ## What are the key results?
  Can learn meaningful embeddings of the structure of graphs, with promising results in program verification, genomics, etc.
