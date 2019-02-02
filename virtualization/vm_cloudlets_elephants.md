@@ -1,0 +1,7 @@
+# You can teach elephants to dance
+
+This paper presents a contrarian viewpoint that VMs are necessary to achieve speedy VM migration times with the presense of a faulty network. This work aims to address the practical need for cloudlets to support bursty workloads, planned fault-tolerance and transient applications. 
+
+At the core, this paper reduces the bytes sent over the network by extending the base image + VM residue approach covered in the original cloudlets paper. It adds 1) delta encoding of the blocks, 2) deduplicating blocks (reduces kernel + userspace duplication) and 3) compression of blocks. It captures VM disk state through a user-space program that intercepts filesystem calls using the FUSE interface. Memory is processed at migration time. Finally, All work is pipelined so that blocks can start streaming incrementally. The net effect of this approach is speedy transfers in the cases of a few windows and linus applications.
+
+My main critisisms of this work is that I don't necessarily buy the practical need for a cloudlet to migrate as compared to reinitializing the cloudlet and restarting from a smaller checkpoint. This work is also fairly recent, so I wonder why it doesn't consider LTE bandwidths that can potentially exceed speeds of 100 Mbps. They also put up this Docker strawman in their evaluation but do not apply their techniques to the Docker image (or at least this is not specified) and thus I feel this comparision is biased.
