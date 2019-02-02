@@ -14,3 +14,11 @@
 * Tapestry is topology aware which can accelerate lookups.
 * Chord is a simpler protocol with simpler addition/removal of nodes.
 * Both have `O(log n)` lookup costs.
+
+## Review
+
+This paper details a low-overhead DHT (distributed hash table) that has a $O(\log{N})$ storage requirement and messages lookup requirement in a stead state. This information requirement is also best-case to bound the amount of lookups needed to answer a DHT query. If there are less than $O(\log{N})$ pointers , then messages will still route (as long as any node can talk to another node. The algorithm has a nice correctness proof which demonstrates its efficacy. I find it interesting that Chord cites Tapestry (next paper) and then claims that it is much simpler.
+
+Chord solves four problems: 1) load balancing, 2) decentralization, 3) scalability, 4) availability and 5) flexible mapping. Consistent hashing acts as the backbone for this algorithm (I will not cover as I am familiar with it). But it mitigates the need to maintain an index of all other nodes by keeping pointers to nodes approximately at the multiples of 2 around the hash ring.
+
+My main criticism for this paper is that it makes various assuptions about the network. For the peer-to-peer file sharing use case that motivated many early works in DHT, links can be across several orders of magnitude of bandwidth. And network links are highly asymmetric between upload and download bandwidth. The paper also farily acknowledges that the proofs depend on uniform randomness of hashes. But clients near each other may be on the same subnet, etc., so hashing IP addresses may not be sufficient to ensure that machine identifiers are sufficiently uniformly distributed.
