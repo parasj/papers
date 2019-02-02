@@ -1,4 +1,22 @@
-## Disco: Running Commodity Operating Systems on Scalable Multiprocessors
+# Disco: Running Commodity Operating Systems on Scalable Multiprocessors
+
+**Key Idea**
+* Disco exports a low-level hardware interface for virtualized multiprocessors
+* Safety mechanic: Run VMM in ring 0, and the host in ring 3 with supervisor mode
+  * Host kernel when running on CPU has kernel memory mapped
+  * When protected call or trap is issued, then VMM recieves fault
+    * Protected calls include TLB mapping, direct physical memory access, IO access, interrupt control
+  * Memory mappings are implemented at each TLB fault though the VMM with a larger software TLB in VMM (like exokernel)
+* Performance optimizations
+  * Share data structures (like buffers)
+    * Deduplicate NFS buffer caches
+  * Share read-only memory for code
+  * Communication using networks
+  * NUMA page replication
+  * Disco-optimizes OS can use a more direct trap mechanism
+* VMM pays a global vs local optimization as it has less information about tenants
+
+## Review
 
 Bugnion et al show how virtualization can allow a single OS to run on a SMP without drastic changes to code. They demonstrate that multiple copies of the OS can run concurrently on a single resource and allow the user of the OS to utilize all resources on the machine. They mitigate performance issues w/r to core datastructure synchonization by sharing memory and buffers.
 
