@@ -1,4 +1,29 @@
-## Xen and the Art of Virtualization
+# Xen and the Art of Virtualization
+
+**Key idea**
+
+* Machine resources are greater than individual OS needs. Virtualization is useful but need to provide functionality and performance.
+* Xen uses paravirtualization where a guest OS runs on a host OS.
+* Why paravirtualization instead of full virtualization?
+  * Efficiency
+    * Full virtualization has issues aroind efficiency since x86 was not designed for virtualization. VMWare ESX has a high performance cost for update-heavy workloads.
+  * Time and other capabilities
+    * Time virtualization can support real-time workloads
+    * Page coloring and superpages can be implemented
+  * Can balance local and global optimization as information can flow from VM to host
+* Interface
+  * Virtual memory
+    * Guests have read access to page tables but must update them through VMM
+    * Hypervisor lives in top 64MB of virtual memory so that it can reuse the TLB
+  * CPU
+    * Guest OS runs at a lower ring than host
+    * Guest registers trap vector table with VMM
+    * System calls utilize handlers for faster operation
+    * Interrupts are virtualized as events
+    * Guests are aware of virtual and real time
+  * IO: Access is through synchronous IO rings
+
+## Review
 
 Xen is a classic paper with a lot of impact. It proposes a practical design for a paravirtualized VMM. They argue that the technique in VMWare ESX leads to large complexity and a performance penalty (due to dynamic rewriting). Instead, Xen modifies the OS in small ways to interact with primitives provided by the Xen VMM.
 
