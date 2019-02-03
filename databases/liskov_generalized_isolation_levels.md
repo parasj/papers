@@ -1,0 +1,9 @@
+##  Generalized Isolation Level Definitions
+
+This paper by Adya et al covers a model for isolation levels in databases (the I in ACID) that allows for flexible implementation. Key idea - enable multi-object dependencies by constructing object-level interference graph of sorts.
+
+The authors begin the paper by setting up a bit of a straw man - they show how ANSI SQL isolation levels are inadequate for several examples they present, and in some cases incorrect. They present a basic object-based database model. It appears that the primary deficiency of ANSI SQL is that multi-object contraints aren't respected. Thus, they define a Direct Serialization Graph which encodes 1) read dependencies, 2) anti-dependencies and 3) write dependencies. Anti-dependency is a bit unintuitive but is basically like a back-edge of sorts in that some T2 must occur after T1.
+
+With this DSG, the authors define several consistency layers PL1-PL3. PL1 means T1's writes are protected from other writes (no cycle in DSG of writes). PL2 means the transaction is protected from reading another page's dirty writes (can be solved for using paths in DSG). PL3 is serializability meaning a change during a transaction will preserve constraints.
+
+They finally present ways to mix isolation levels in a single DSG in a MSG (mixed serialization graph). This paper is generally good and gave me an understanding of issues with serializability and isolation in general.  What is interesting is that Postgres implements read committed, repeatable read and serializable (PL2, PL2.99, PL3). So this work had some impact. However, I would have liked to see more practical examples of issues real programmers encountered with DBs w/r to isolation. Also, the syntax used in some examples was only presented in the middle of the paper.
