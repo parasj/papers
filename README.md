@@ -22,6 +22,10 @@ ecure
   * easier to add complexity later, but hard to remove it
   * allows for fast iteration
 * Get correctness first and then optimize later
+* Why do systems fail (Stonebraker)?
+ * Excessive complexity
+ * Unecessary extensions and functionality
+ * No compelling use case that is widely accepted
 
 ## Systems tradeoffs
 * Functionality vs performance vs `x` 
