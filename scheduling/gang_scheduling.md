@@ -1,0 +1,2 @@
+# Gang Scheduling Performance Benefits for Fine-Grain Synchronization
+**Key idea**: Run all dependent threads of an application across processors at the same time so that there are no situations where a task is sleeping that is a dependency for a running task. This also avoids context switching overheads due to blocking. This strategy can work well on heavily loaded systems with fine-grained parallelism.
