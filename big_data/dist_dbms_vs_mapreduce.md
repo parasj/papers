@@ -1,0 +1,7 @@
+# A comparision of approaches to large-scale data analysis
+
+This paper pretty much summarizes some limitations of Map Reduce versus more modern parallel databases. They compare Map Reduce to a parallel row-oriented DB and a column-oriented store. I mostly enjoyed this paper for the lengthy introduction that covered database concepts in a modern context.
+
+One key point the paper really focuses on is that Map Reduce is poorly optimized for scenarios where sharing of data is needed. Databases present a better solution for those applications through explicit schema management. While I think this makes sense, I think serialization formats like ProtoBuf are Google's response to schema management. One key line in the paper is that it says "large scale databases.. send the computation to the data". I think this is interesting - and this seems to be an insight exploited by systems like Spark.
+
+I thought the paper was a little unfair and used Map Reduce as a bit of a punching bag. A lot of DB approaches didn't deal with unstructured text well which is what Map Reduce was used for at Google. For search indexing and analysis, it works well. Also, the paper glosses over scalability >100 nodes as few people have data needs that large. However, Google has data needs more than that. So while other organizations may not need 1000 node scalability, Map Reduce was used at Google to index large amounts of data. The paper felt a bit like a big advertisment for Vertica which is Mike Stonebraker's company.
