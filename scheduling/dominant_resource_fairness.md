@@ -1,6 +1,8 @@
 # Dominant Resource Fairness: Fair Allocation of Multiple Resource Types
 [Paper link](https://amplab.cs.berkeley.edu/wp-content/uploads/2011/06/Dominant-Resource-Fairness-Fair-Allocation-of-Multiple-Resource-Types.pdf)
 
+**Key idea**: DRF adjusts resource allocation so each job group has equalized their dominant resource needs (system of eqns.) It is _sharing incentivised_, _strategy proof_, _pareto efficient_ and _envy-free_.
+
 Ghodsi et al demonstrate an algorithm for fair resource allocation on multi-tenant environments. If one only considers one resource like CPU, then allocation is easy to determine. At minimum, each task can claim $\frac{1}{n}$ resources where $n$ represents the number of tasks on a system. However, this is not so easy in systems that mix both memory-heavy and CPU-heavy tasks. Instead, the paper presents an algorithm that is more successful in these environments, defined by 1) incentivising sharing of the resources, 2) strategy-proofness meaning one should not benefit from lying about resource demands, 3) envy-freeness meaning that any task must be satisfied with their allocation and 4) pareto-efficiency meaning the system is running at maximum allocation in a nash equilibrium.
 
 The algorithm, in short, is to allocate resources so each task has a proportional share of the dominant resources. There are some nice proofs for why this demonstrates the previously mentioned properties of the system. I think my biggest criticism of this work is that it doesn't adapt well to resources such as GPUs which are difficult to share spatially but can be shared temporally. A system of DRF will fail to achieve good spatial utilization on the resource.
