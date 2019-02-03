@@ -1,0 +1,7 @@
+  ## C-Store: A column-oriented DBMS
+
+This paper presents a database that is well optimized for read-heavy applications without sacrificing too much write performance. OLTP applications prefer write-optimized databases which include row-stores. These databases can write a record in a single disk seek atomically. However, there are advantages to data stored in column-stores. 1) data can be compressed and coded (map encoding, like a huffman tree), 2) data can be densely packed (with no extra padding, storing number 8 only needs 3 bits).
+
+C-Store has a read-optimized store and a write-optimized store. This looks similar to the data warehouse model we use today except that tuple groups move between the two stores, instead of one way. Queries also can occur across both stores. This looks a bit like a memory hierarchy in some ways. At it's core, the C-Store supports insertions and deleteions. Updates are inserts followed by deletions. All operations are timestamped which provides a user snapshot consistency. Data is kept reliable through redunant storage of projections.
+
+This paper was an interesting paper but my main criticism of this paper is that key aspects of the column store were left abstract (how to optimize projections, etc). Also, it seems like an aggregation of several other products into an integrating offering, and a bit less like completely novel research. But then again, it's the combination of features that makes column stores competitive.
