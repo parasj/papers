@@ -1,3 +1,5 @@
+## Granularity of locks and degrees of consistency in a shared database
+
 **Top points:** 1) size of critical regions/objects demonstrates tradeoff between concurrency and overhead, 2) introduction of "dynamic" or adjustable lock sizes, 3) consistency can be traded off according to user's needs, 4) these compromises by the user allow DB to unlock more performance.
 
 *1) Tradeoffs between overhead of locks and concurrency, determined by size of locks*: The granularity of locks can unlock more potential concurrency but it also can introduce increased overhad (e.g. if we lock each row, a large query now is more expensive). 
