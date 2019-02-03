@@ -15,6 +15,7 @@
   * Virtual memory
     * Guests have read access to page tables but must update them through VMM
     * Hypervisor lives in top 64MB of virtual memory so that it can reuse the TLB
+    * Ballooning in the guest VM can reclaim memory
   * CPU
     * Guest OS runs at a lower ring than host
     * Guest registers trap vector table with VMM
