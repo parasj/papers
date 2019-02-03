@@ -1,24 +1,35 @@
 Old questions: https://www2.eecs.berkeley.edu/Grads/CS/Prelims/osqu.html
 
 # Stoica 2018
+
+## ZY questions
 Q1
-Describe paging and segmentation.  What are their disadvantages and advantages.  List a way to overcome the disadvantage.
-What's E2E argument?  Give two examples.
-Describe log-structured file system.  What are their advantages.
-What are active messages?  
+* Describe paging and segmentation.  What are their disadvantages and advantages.  List a way to overcome the disadvantage.
+* What's E2E argument?  Give two examples.
+* Describe log-structured file system.  What are their advantages.
+* What are active messages?  
 
 Q2
-Assume you have three workloads (1) web server (2) database server (3) network file server.  You can either back these apps with (1) just SSD, (2) just HDD, (3) or a combination of the two.
-Compare SSD and HDD in several dimensions.  
-For each of these 3 workloads, discuss which storage solution you'd choose and why.
-How would your choice for 1 system change if you were to pick a parameter for a storage system and change it?
+* Assume you have three workloads (1) web server (2) database server (3) network file server.  You can either back these apps with (1) just SSD, (2) just HDD, (3) or a combination of the two.
+* Compare SSD and HDD in several dimensions.  
+* For each of these 3 workloads, discuss which storage solution you'd choose and why.
+* How would your choice for 1 system change if you were to pick a parameter for a storage system and change it?
 
 Q3
 Context: Exokernel and SPIN
-What's the motivation between these classes of OSs?
-Explain the design Exokernel.
-Explain SPIN.  How is it different from Exokernel?
-Despite their academic impact they didn't take off in practice.  Discuss why.
+* What's the motivation between these classes of OSs?
+* Explain the design Exokernel.
+* Explain SPIN.  How is it different from Exokernel?
+* Despite their academic impact they didn't take off in practice.  Discuss why.
+
+## SK questions
+1. What are the advantages and disadvantages of segmentation and paging?
+2. What is the End-to-End Principle (with an example)?
+3. Explain LFS. (I think there was something about active messages, but that may have just been a discussion, not sure it was an actual question)
+4. What are the advantages and disadvantages of HDDs and SSDs?
+5. How might you use HDDs and SSDs in some real applications?
+6. If SSDs behaved differently (in a way of your choice), how would it affect the design of your applications in #5
+7. Compare and contrast Exokernel and SPIN? (An extended discussion of this was the "last question" that filled the remaining time)
 
 # Wagner Smith 2001
 Recollection #1
