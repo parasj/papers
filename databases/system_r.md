@@ -47,3 +47,10 @@ Links:
   * Fault-tolerance
   * Access control
   * Performance
+  
+## Review
+This classic paper is a great read - it presents the design behind an early relational database developed at IBM. It's key goal was to prove the relational model could be supported by a high-performance DB. I see it's major contribution to be a way to convert a high-level SQL query into a fast algorithm. Joe added an intersting annotation regarding data independence - "When this inequality holds in a systems context, declarative languages and automatic (re)optimization are worth considering".
+
+One critical observation during development was the need to trade off I/O with CPU during optimization. This point still remains important to performance optimization today. I glanced through Selinger's paper and it's very interesting to see that it's still used today.
+
+One criticism I had for the paper is that it dives quite deep into the history of the development of System R as compared to various properties of the system and the goals. And while not a criticism, I am surprised System R suceeded as a project. With so many diverse and ambitious goals, it's impressive that it didn't end up like Multics. Perhaps it's the multi-phase design of the project that enabled the project to succeed.
